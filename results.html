@@ -4,49 +4,83 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
-<title>The Aesthetic Advisory - Skin results</title>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>The Aesthetic Advisory - Results</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#161616;--bone:#F5F1EB;--stone:#E6DFD5;--clay:#B4573B;--mute:#5C5650;--white:#FFFFFF;}
+:root{--ink:#161616;--bone:#F5F1EB;--stone:#E6DFD5;--clay:#B4573B;--peach:#F0C9B8;--mute:#5C5650;--white:#FFFFFF;--line:rgba(22,22,22,.13);--ease:cubic-bezier(.16,1,.3,1)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'DM Sans',sans-serif;background:var(--stone);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased}
-header{padding:22px;text-align:center;background:var(--ink)}
-header .brand{font-family:'Jost',sans-serif;font-size:22px;letter-spacing:.34em;text-transform:uppercase;color:var(--bone);font-weight:300}
-header .tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,235,.7);margin-top:6px}
-.wrap{max-width:960px;margin:0 auto;padding:44px 20px 60px}
-h1,h2,h3{font-family:'Jost',sans-serif;font-weight:300;color:var(--ink);line-height:1.15}
-h2{font-size:32px;margin-bottom:10px}
-h3{font-size:21px;margin-bottom:6px;font-weight:400}
-p{font-size:15px;line-height:1.7;color:#4A4540}
-.eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--clay);margin-bottom:12px;font-weight:500}
-.warn{border:1px solid var(--clay);background:var(--bone);padding:16px 20px;margin:24px 0 32px;font-size:13px;line-height:1.6}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.case{background:var(--white);border:1px solid rgba(22,22,22,.08);padding:26px}
-.case .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin-bottom:8px;font-weight:500}
-.case img{width:100%;display:block;border:1px solid rgba(22,22,22,.08);margin:14px 0}
-.case .plan{font-size:13px;color:var(--mute);border-top:1px solid var(--stone);padding-top:12px;margin-top:12px}
-.case .plan b{font-weight:600;color:var(--ink)}
-.cta{text-align:center;margin-top:40px}
-.btn{display:inline-block;background:var(--ink);color:var(--bone);padding:15px 32px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;font-weight:500}
-footer{text-align:center;padding:22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A847D}
-@media (max-width:640px){.grid{grid-template-columns:1fr}}
+html,body{overflow-x:clip}
+body{font-family:'DM Sans',sans-serif;font-weight:300;background:var(--bone);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Jost',sans-serif;font-weight:300;letter-spacing:.02em}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--clay);margin-bottom:16px;font-weight:500}
+nav{position:sticky;top:0;z-index:30;background:rgba(245,241,235,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+nav img{height:46px;display:block}
+nav a.back{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--ink);padding:10px 16px;transition:background .3s,color .3s}
+nav a.back:hover{background:var(--ink);color:var(--bone)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+header{padding:90px 0 50px}
+header h1{font-size:clamp(34px,5vw,60px);line-height:1.08}
+header h1 strong{font-weight:500;color:var(--clay)}
+.lead{font-size:17px;max-width:60ch;color:var(--mute);margin-top:18px}
+section{padding:70px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(26px,3.2vw,40px);line-height:1.15;margin-bottom:14px}
+.modes{margin-top:30px;border:1px solid var(--line);background:var(--ink)}
+.modes img{width:100%;display:block}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--line);padding:30px 28px;display:flex;flex-direction:column;gap:14px;transition:transform .45s var(--ease),box-shadow .45s}
+.card:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(0,0,0,.35)}
+.card .stars{color:var(--clay);letter-spacing:.2em;font-size:13px}
+.card blockquote{font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.5}
+.card cite{margin-top:auto;font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:500}
+.cta{background:var(--ink);color:var(--bone);text-align:center}
+.cta h2{color:var(--bone)}
+.cta .lead{color:rgba(245,241,235,.85);margin:12px auto 0}
+.btn{display:inline-block;margin-top:28px;background:var(--bone);color:var(--ink);padding:16px 32px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background .3s,transform .3s var(--ease)}
+.btn:hover{background:var(--peach);transform:translateY(-2px)}
+footer{padding:30px 0;font-size:11px;color:var(--mute);text-align:center}
+.demo-note{position:fixed;bottom:14px;right:14px;background:#0A2A28;color:#00D4BC;font-size:10px;letter-spacing:.2em;text-transform:uppercase;padding:8px 12px;z-index:50}
 </style>
 </head>
 <body>
-<header><div class="brand">The Aesthetic Advisory</div><div class="tag">Skin results &middot; shared with consent</div></header>
-<div class="wrap">
-  <div class="eyebrow">Real skin, real plans</div>
-  <h2>What a plan looks like when you can see it.</h2>
-  <p>Every result here starts with the $249 consultation: Observ imaging, the plan on screen, then the treatments and homecare chosen for that skin. Skin treatment results can be shown openly. Results vary from person to person, and every plan starts with a consultation.</p>
-  <div class="warn">Placeholders. The four pairs below are generated stand-ins so you can see the format. They are replaced with The Aesthetic Advisory's own Observ before and afters, with each client's consent captured in the CRM, before anything goes live.</div>
+<script>
+(function(){if('scrollRestoration' in history)history.scrollRestoration='manual';function t(){if(location.hash)return;window.scrollTo(0,0);}t();window.addEventListener('load',t);window.addEventListener('pageshow',function(e){if(e.persisted)t();});})();
+</script>
+<div class="demo-note">Concept by Clinic Catalyst</div>
+<nav><div class="wrap"><a href="website.html"><img src="assets/logo.png" alt="The Aesthetic Advisory"></a><a class="back" href="website.html#consult">Book your consultation</a></div></nav>
+<header><div class="wrap">
+  <div class="eyebrow rv">Results</div>
+  <h1 class="rv" style="--d:.1s">Your skin, <strong>seen properly.</strong></h1>
+  <p class="lead rv" style="--d:.2s">Every result at The Aesthetic Advisory starts with the $249.49 skin consultation, where your skin is imaged on the Observ 520x and your plan is explained with your own photos.</p>
+</div></header>
+<section><div class="wrap">
+  <div class="eyebrow rv">What the Observ shows</div>
+  <h2 class="rv" style="--d:.1s">10 observation modes.</h2>
+  <p class="lead rv" style="--d:.2s">Different modes show different things in the skin, so your plan is built on what the images show.</p>
+  <div class="modes rv" style="--d:.25s"><img src="assets/observ-modes.jpg" alt="Observ 520x imaging modes"></div>
+</div></section>
+<section><div class="wrap">
+  <div class="eyebrow rv">Skin journeys</div>
+  <h2 class="rv" style="--d:.1s">In clients' own words.</h2>
   <div class="grid">
-    <div class="case"><div class="k">Pigmentation &middot; placeholder</div><h3>Sun-driven pigmentation, cheek</h3><img src="assets/results/pigment.jpg" alt="Pigmentation placeholder, before and after"><p>Pigment that had faded and returned every summer, imaged under UV, then treated for the type it was.</p><div class="plan"><b>The plan:</b> consultation, a staged course in clinic, daily SPF and a brightening homecare routine for site, progress photos on the Observ at each visit.</div></div>
-    <div class="case"><div class="k">Acne and congestion &middot; placeholder</div><h3>Active breakouts, jaw and cheek</h3><img src="assets/results/acne.jpg" alt="Acne placeholder, before and after"><p>Breakouts that kept coming back. The cause was treated first, then the marks left behind.</p><div class="plan"><b>The plan:</b> consultation, a calming course in clinic, homecare that could survive a week on site, then Skin Club to hold it.</div></div>
-    <div class="case"><div class="k">Dry and dehydrated &middot; placeholder</div><h3>Site skin, after the swing</h3><img src="assets/results/dry.jpg" alt="Dehydration placeholder, before and after"><p>Flaky, tight and dull after seven days on site. Dehydration lines visible under the Observ.</p><div class="plan"><b>The plan:</b> barrier repair in clinic early in the swing, LED, and a four-minute routine with three products for the donga.</div></div>
-    <div class="case"><div class="k">Fine lines and ageing &middot; placeholder</div><h3>Outer eye and upper cheek</h3><img src="assets/results/lines.jpg" alt="Fine lines placeholder, before and after"><p>The first lines and crepey texture. Several small things, put in the right order.</p><div class="plan"><b>The plan:</b> consultation, a course of collagen-supporting treatment in clinic, homecare from the images, quarterly Observ review.</div></div>
+    <div class="card rv"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>Another fantastic treatment by Kyara! 8 weeks into my skin journey and my face feels amazing,</blockquote><cite>Renae W. &middot; Google review</cite></div>
+    <div class="card rv" style="--d:.1s"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>Very happy with my service today &amp; have rebooked to begin my skin journey and goals.</blockquote><cite>Elice L. &middot; Google review</cite></div>
+    <div class="card rv" style="--d:.2s"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>It felt like the team really cared about my skin journey.</blockquote><cite>Sheridan F. &middot; Google review</cite></div>
   </div>
-  <div class="cta"><a class="btn" href="website.html#consult">Start with your consultation</a></div>
-</div>
-<footer>Demo built by Clinic Catalyst for The Aesthetic Advisory &middot; not indexed</footer>
+</div></section>
+<section class="cta"><div class="wrap">
+  <h2 class="rv">Start with your consultation.</h2>
+  <p class="lead rv" style="--d:.1s">Observ imaging, a mini skin health facial, LED and your plan, for $249.49. Individual results vary.</p>
+  <a class="btn rv" style="--d:.2s" href="website.html#consult">Book your consultation</a>
+</div></section>
+<footer>Website concept prepared by Clinic Catalyst for The Aesthetic Advisory. Reviews from Google.</footer>
+<script>
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in');});return;}var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.1});els.forEach(function(e){io.observe(e);});})();
+</script>
 </body>
 </html>
