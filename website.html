@@ -40,8 +40,8 @@ nav{position:sticky;top:0;z-index:30;background:rgba(245,241,235,.94);backdrop-f
 @keyframes drop{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;transition:height .4s var(--ease)}
 body.scrolled nav .wrap{height:64px}
-nav .logo img{height:52px;display:block;transition:height .4s var(--ease)}
-body.scrolled nav .logo img{height:42px}
+nav .logo img{height:72px;display:block;transition:height .4s var(--ease)}
+body.scrolled nav .logo img{height:56px}
 nav ul{display:flex;gap:24px;list-style:none;align-items:center;white-space:nowrap}
 nav ul a{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);text-decoration:none;position:relative;padding-bottom:3px}
 nav ul a:not(.cta)::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
@@ -186,7 +186,7 @@ section.dark::after{content:"";position:absolute;width:520px;height:520px;right:
 .slide{flex:0 0 50%;padding:0 11px}
 @media (max-width:860px){.slide{flex-basis:100%}}
 .card{background:var(--white);border:1px solid var(--line);padding:34px 32px;height:100%;display:flex;flex-direction:column;gap:18px;position:relative}
-.card::before{content:"\201C";position:absolute;right:22px;top:-8px;font-family:'Jost',sans-serif;font-size:110px;color:var(--peach);line-height:1;font-weight:300}
+.card::before{content:"\201C";position:absolute;right:24px;top:6px;font-family:Georgia,'Times New Roman',serif;font-size:96px;color:var(--peach);line-height:1}
 .card .stars{color:var(--clay);letter-spacing:.2em;font-size:13px}
 .card blockquote{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(18px,1.7vw,22px);line-height:1.5;color:var(--ink);position:relative}
 .card cite{margin-top:auto;font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:500}
